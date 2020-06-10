@@ -4,7 +4,8 @@ class Show < ActiveRecord::Base
   # t.string :day
   # t.integer :rating
 
-  def highest_rating
+  def self.highest_rating
     Show.maximum(:rating)
   end
+
 end
