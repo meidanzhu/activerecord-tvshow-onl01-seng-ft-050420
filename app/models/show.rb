@@ -30,4 +30,5 @@ class Show < ActiveRecord::Base
 
   def self.shows_by_alphabetical_order
     Song.order(:name)
+  end
 end
