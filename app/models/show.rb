@@ -19,4 +19,12 @@ class Show < ActiveRecord::Base
   def self.least_popular_show
     Show.where("rating = #{self.lowest_rating}").first
   end
+
+  def self.ratings_sum
+    Show.sum(:rating)
+  end
+
+  def self.popular_shows
+    Song.all.where("rating > 5")
+  end
 end
