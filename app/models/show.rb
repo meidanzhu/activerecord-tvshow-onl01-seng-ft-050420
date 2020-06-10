@@ -25,6 +25,6 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    Song.all.where("rating > 5")
+    Song.where("rating > 5")
   end
 end
